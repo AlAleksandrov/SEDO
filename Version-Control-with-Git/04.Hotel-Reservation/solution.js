@@ -50,4 +50,34 @@ function getPersonalData(e) {
 function fillRoomForm(e) {
   e.preventDefault();
   changeContent("search-result-form-content");
+  .querySelector("#search-form-button")
+  .addEventListener("click", (e) => searchFormData(e));
+
+function searchFormData(e) {
+  e.preventDefault();
+  const data = e.target.parentElement;
+  const checkIn = data.querySelector("#check-in").value;
+  const checkOut = data.querySelector("#check-out").value;
+  const people = data.querySelector("#people").value;
+
+  if (
+    checkIn != "" &&
+    checkOut != "" &&
+    people != "" &&
+    new Date(checkIn) <= new Date(checkOut)
+  ) {
+    reservation.startDate = checkIn;
+    reservation.endDate = checkOut;
+    reservation.guestsCount = people;
+    changeContent("search-result-form-content");
+  }
+  .querySelectorAll(".room-type")
+  .forEach((btn) => btn.addEventListener("click", (e) => selectRoomType(e)));
+
+function selectRoomType(e) {
+  let myTarget = e.target;
+  myTarget.parentElement.classList.add("selected-room");
+  let roomType = myTarget.parentElement.querySelector("p").textContent;
+  reservation.roomType = roomType;
+  changeContent("guest-details-form-content");
 }

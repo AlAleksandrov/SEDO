@@ -190,6 +190,8 @@ button:hover {
 
 /* Guest Details Form */
 .guest-details-form {
+/* Search Form */
+.search-form {
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
@@ -197,6 +199,16 @@ button:hover {
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
+/* Our Offers */
+.search-result-form-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    height: 80vh;
+}
+.room-type-item {
+    background-color: rgba(255,255,255,0.13);
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
@@ -204,6 +216,7 @@ button:hover {
     padding: 50px 35px;
 }
 .guest-details-form * {
+.search-form * {
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
@@ -211,6 +224,7 @@ button:hover {
     border: none;
 }
 .guest-details-form h3 {
+.search-form h3 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -225,6 +239,15 @@ button:hover {
 .guest-details-form input {
     display: block;
     height: 45px;
+.search-form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.search-form input {
+    display: block;
+    height: 50px;
     width: 100%;
     background-color: rgba(255,255,255,0.07);
     border-radius: 3px;
@@ -239,9 +262,41 @@ button:hover {
     background-color: #ffffff;
     color: #080710;
     padding: 12px 0;
+.search-form button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+}
+.room-type-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.room-type-item p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+.room-type-item button {
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 10px 0;
     font-size: 16px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
+    border: none;
 }
