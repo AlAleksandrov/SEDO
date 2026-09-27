@@ -20,13 +20,34 @@
 
     <div class="site-content">
         <!-- Site Content -->
+      
+        <!-- Search Form -->
+        <div class="search-form-content custom-form">
+            <div class="background">
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            <form class="search-form">
+                <h3>Search Form</h3>
+                <label for="check-in">Check-in:</label>
+                <input type="date" id="check-in" name="check-in" required>
+
+                <label for="check-out">Check-out:</label>
+                <input type="date" id="check-out" name="check-out" required>
+
+                <label for="people">Numbers of people:</label>
+                <input type="number" id="people" min="1" max="30" name="people" required>
+
+                <button id="search-form-button">Next</button>
+            </form>
+
         <!-- Our Offers Form -->
         <div class="search-result-form-content custom-form hidden">
             <div class="background">
                 <div class="shape"></div>
                 <div class="shape"></div>
-            </div>
-            <div class="room-type-item">
+            </div>  
+          <div class="room-type-item">
                 <img src="./static/img/budgetRoom.jpg" alt="room-image" />
                 <p>Budget Room - 70$</p>
                 <button class="room-type" id="budget-room">Choose</button>
@@ -41,6 +62,7 @@
                 <p>King Room - 200$</p>
                 <button class="room-type" id="king-room">Choose</button>
             </div>
+
         </div>
         <!-- Thank you, page! -->
         <div class="thank-you-content custom-form">
