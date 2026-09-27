@@ -47,4 +47,13 @@ function searchFormData(e) {
     reservation.guestsCount = people;
     changeContent("search-result-form-content");
   }
+  .querySelectorAll(".room-type")
+  .forEach((btn) => btn.addEventListener("click", (e) => selectRoomType(e)));
+
+function selectRoomType(e) {
+  let myTarget = e.target;
+  myTarget.parentElement.classList.add("selected-room");
+  let roomType = myTarget.parentElement.querySelector("p").textContent;
+  reservation.roomType = roomType;
+  changeContent("guest-details-form-content");
 }
