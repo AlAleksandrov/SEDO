@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./static/css/styles.css">
-    <title>Hotel reservation</title>
+
+    <title>Hotel Reservation</title>
 </head>
 
 <body>
+
     <section id="welcome">
         <h1>&#9734; Welcome to our family hotel &#9734;</h1>
+
         <div class="home-container">
             <div class="info">
                 <h1>Hotel reservation</h1>
@@ -19,63 +24,136 @@
     </section>
 
     <div class="site-content">
-        <!-- Site Content -->
-      
+
         <!-- Search Form -->
-        <div class="search-form-content custom-form">
+        <div class="search-form-content custom-form hidden">
             <div class="background">
                 <div class="shape"></div>
                 <div class="shape"></div>
             </div>
+
             <form class="search-form">
                 <h3>Search Form</h3>
+
                 <label for="check-in">Check-in:</label>
                 <input type="date" id="check-in" name="check-in" required>
 
                 <label for="check-out">Check-out:</label>
                 <input type="date" id="check-out" name="check-out" required>
 
-                <label for="people">Numbers of people:</label>
-                <input type="number" id="people" min="1" max="30" name="people" required>
+                <label for="people">Number of people:</label>
+                <input type="number" id="people" name="people" min="1" max="30" required>
 
-                <button id="search-form-button">Next</button>
+                <button type="submit" id="search-form-button">Next</button>
             </form>
+        </div>
 
         <!-- Our Offers Form -->
         <div class="search-result-form-content custom-form hidden">
+            <div class="room-type-item">
+                <img src="./static/img/budgetRoom.jpg" alt="Budget room">
+
+                <h3>Budget Room</h3>
+                <p>Price: 70$</p>
+
+                <button type="button" class="room-type" data-room="Budget Room - 70$">
+                    Choose
+                </button>
+            </div>
+
+            <div class="room-type-item">
+                <img src="./static/img/familyRoom.jpg" alt="Family room">
+
+                <h3>Family Room</h3>
+                <p>Price: 150$</p>
+
+                <button type="button" class="room-type" data-room="Family Room - 150$">
+                    Choose
+                </button>
+            </div>
+
+            <div class="room-type-item">
+                <img src="./static/img/kingRoom.jpg" alt="King room">
+
+                <h3>King Room</h3>
+                <p>Price: 200$</p>
+
+                <button type="button" class="room-type" data-room="King Room - 200$">
+                    Choose
+                </button>
+            </div>
+        </div>
+
+        <!-- Guest Details Form -->
+        <div class="guest-details-form-content custom-form hidden">
             <div class="background">
                 <div class="shape"></div>
                 <div class="shape"></div>
-            </div>  
-          <div class="room-type-item">
-                <img src="./static/img/budgetRoom.jpg" alt="room-image" />
-                <p>Budget Room - 70$</p>
-                <button class="room-type" id="budget-room">Choose</button>
-            </div>
-            <div class="room-type-item">
-                <img src="./static/img/familyRoom.jpg" alt="room-image" />
-                <p>Family Room - 150$</p>
-                <button class="room-type" id="family-room">Choose</button>
-            </div>
-            <div class="room-type-item">
-                <img src="./static/img/kingRoom.jpg" alt="room-image" />
-                <p>King Room - 200$</p>
-                <button class="room-type" id="king-room">Choose</button>
             </div>
 
+            <form class="guest-details-form">
+                <h3>Guest Details</h3>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone-number">Phone number:</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="form-buttons">
+                    <button type="button" id="guest-details-back">Back</button>
+                    <button type="submit" id="guest-details-next">Next</button>
+                </div>
+            </form>
         </div>
-        <!-- Thank you, page! -->
+
+        <!-- Confirm Reservation Form -->
+        <div class="confirm-reservation-content custom-form hidden">
+            <div class="background">
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+
+            <form class="confirm-reservation">
+                <h3>Confirm Reservation</h3>
+
+                <p id="guest-name">Name:</p>
+                <p id="guest-phone">Phone:</p>
+                <p id="guest-email">Email:</p>
+                <p id="guest-room-type">Room:</p>
+                <p id="guest-data-in">Check-in:</p>
+                <p id="guest-data-out">Check-out:</p>
+
+                <div class="form-buttons">
+                    <button type="button" id="confirm-back">Back</button>
+                    <button type="submit" id="confirm-reservation-button">
+                        Confirm
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Thank You Page -->
         <div class="thank-you-content custom-form">
             <div class="background">
                 <div class="shape"></div>
                 <div class="shape"></div>
             </div>
+
             <form class="thank-you">
                 <h3>Thank you for your reservation!</h3>
-                <button id="new-reservation">Make new reservation</button>
+
+                <button type="button" id="new-reservation">
+                    Make new reservation
+                </button>
             </form>
         </div>
+
     </div>
+
     <script src="solution.js"></script>
 </body>
 
